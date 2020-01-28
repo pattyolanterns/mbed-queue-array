@@ -42,9 +42,9 @@ void QueueArray<T>::enqueue(T item) {
 	// check for Queue overflow
 	if (isFull()) return;
 
-	_tail = (_tail + 1) % capacity;
+	_tail = (_tail + 1) % _capacity;
 	_arr[_tail] = item;
-	count++;
+	_count++;
 }
 
 template<typename T>
